@@ -21,7 +21,7 @@ button:hover{
 }
 body{
     margin: 0;
-    background-color: rgb(15, 30, 44);
+    background-color: rgb(241, 241, 241);
 }
 main{
     display: flex;
