@@ -21,7 +21,7 @@ button:hover{
 }
 body{
     margin: 0;
-    background-color: rgb(221, 222, 223);
+    background-color: rgb(15, 30, 44);
 }
 main{
     display: flex;
@@ -50,7 +50,11 @@ div{
     border-radius: 20px;
     border: 2px black solid;
 }
+h3{
+    font-size: 20px;
+}
 img{
     height: 100px;
     width: auto;
+    border-radius: 20%;
 }
