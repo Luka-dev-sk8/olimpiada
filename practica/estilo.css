@@ -5,6 +5,19 @@ header{
     background-color: #80CEE1;
     font-style: italic;
     color: aliceblue;
+    gap: 50%;
+}
+button{
+    height: 5vh;
+    width: 6vw;
+    margin-right: 10px;
+    border: unset;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: gray;
+    transition: 0.4s;
 }
 body{
     margin: 0;
