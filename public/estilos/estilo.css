@@ -23,7 +23,7 @@ button:hover{
 }
 body{
     margin: 0;
-    
+    background-color:#80CEE1 ;
 }
 main{
     display: flex;
@@ -31,16 +31,9 @@ main{
     flex-wrap: nowrap;
     justify-content: center;
     gap: 2%;
-    padding-bottom: 2%;
     
     
-}
-#pared1{
-    margin: 0;
-    background-color:#80CEE1 ;
-}
-#pared2{
-    background-color: bisque;
+    
 }
 
 /**div{
