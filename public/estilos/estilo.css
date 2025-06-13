@@ -8,14 +8,14 @@ header{
     flex-wrap: wrap;
     gap: 8%;
     padding: 5px;
-    height: 30%;
+    height: auto;
     box-shadow: 0px 0px 20px 0px black;
 }
 button{
     height: 5vh;
     width: 90px;
     border: unset;
-    background-color: aliceblue;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 button:hover{
@@ -24,7 +24,10 @@ button:hover{
 }
 body{
     margin: 0;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 main{
     display: flex;
@@ -39,35 +42,72 @@ svg{
     width: 10%;
 }
 .conteiner{
-    background: linear-gradient(to bottom, #92cadd, #6be26b);
-    
-    height: 80vh;
-    padding-bottom: 10%;
-    
+    background: linear-gradient(to bottom, #a7e7fc, #81f781);
+    height: auto;
+    width: 100%;
+    padding-bottom: 10%;    
 }
-/**div{
-    flex: 1 0 auto;
+.conteiner2{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
-    height: 250px;
-    width: 160px;
-    font-size: 15px;
-    padding: 20px;
-    margin-left: 20px;
-    border-radius: 20px;
-    border: 2px black solid;
     background-color: aliceblue;
-}**/
-h3{
-    font-size: 20px;
+    box-shadow: 0px 1px 4px 0px black;
+    border-radius: 10px;
+    height: auto;
+    width: 90vw;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    gap: 10px;
+    padding-bottom: 2%;
 }
-img{
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    width:100%;
+}
+input{
+    width: 20%;
+    height: 5vh;
+    border-radius: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: small;
     
-    height: 30px;
+}
+li{
+
+    display: inline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3{ 
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+img{ height: 30px;
     width: auto;
-    
 }
 
 #tienda{
@@ -84,7 +124,7 @@ img{
     padding: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-p{
+#descripcion{
     text-align: center;
     font-size: 150%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -97,8 +137,14 @@ p{
     box-shadow: 0px 3px 5px 0px black;
 }
 #promociones{
-    background-color: #6c97a5;
+    background-color: #a7e7fc;
 }
 #explo_destinos{
-    background-color: #5fc95f;
+    background-color: #81f781;
+}
+#subir{
+    height: 6vh;
+    background-color: #76e476;
+    border-radius: 10px;
+    
 }
