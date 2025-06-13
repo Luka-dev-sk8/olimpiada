@@ -26,28 +26,37 @@
         </header>
         
         <h1 class="texto_centrado">Descubre El Mundo Con Sobre Cielo</h1>
-        <p>Viajes nacionales e internacionales con las mejores experiencias y precios</p>
+        <p id="descripcion">Viajes nacionales e internacionales con las mejores experiencias y precios</p>
         <main>
             <button id="promociones" class="especiales"><b>Ver Promociones</b></button>
             <button id="explo_destinos" class="especiales"><b>Explorar Destinos</b></button>
         </main>
     </div>
-    <form>
-        <div class="conteiner2">
-            <h3>Busca tu próxima aventura</h3>
-            <ul>
-                <li>Destino</li>
-                <li>Fecha de ida</li>
-                <li>Fecha de vuelta</li>
-                <li>Pasajeros</li>
-            </ul>
-            <ul>
+    <form class="conteiner2">
+            <div>
+                <h3>Busca tu próxima aventura</h3>
+            </div>
+        <div class="form">
+            <div class="formulario">
+                <p >Destino</p>
                 <input type="text" placeholder="Selecciona el destino">
+            </div>
+            <div class="formulario">
+                <p >Fecha de ida</p>
                 <input type="date">
+            </div>
+            <div class="formulario">
+                <p >Fecha de Vuelta</p>
                 <input type="date">
+            </div>
+            <div class="formulario">
+                <p >Pasajeros</p>
                 <input type="number" placeholder="Ingrese el numero de Pasajeros">
-            </ul>
+            </div>
         </div>
+            
+            <button id="subir">Enviar</button>
+            
     </form>
 
 
