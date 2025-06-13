@@ -1,19 +1,21 @@
 header{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    background-color: #80CEE1;
-    font-style: italic;
-    color: aliceblue;
-    gap: 50%;
+    justify-content: center;
+    background-color: #f1f1f1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    color: black;
+    flex-wrap: wrap;
+    gap: 8%;
+    padding: 5px;
 }
 button{
     height: 5vh;
-    width: 6vw;
-    margin-right: 10px;
+    width: 100px;
     border: unset;
     background-color: aliceblue;
-    border-radius: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 button:hover{
     background-color: gray;
@@ -21,22 +23,27 @@ button:hover{
 }
 body{
     margin: 0;
-    background-color: rgb(241, 241, 241);
+    
 }
 main{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    flex-direction: row;
-    width: 100%;
-    height: 65vh;
-    overflow: scroll;
-    margin-top: 2%;
-    margin-right: 2%;
-    padding: 2%;
+    justify-content: center;
+    gap: 2%;
+    padding-bottom: 2%;
+    
+    
+}
+#pared1{
+    margin: 0;
+    background-color:#80CEE1 ;
+}
+#pared2{
+    background-color: bisque;
 }
 
-div{
+/**div{
     flex: 1 0 auto;
     display: flex;
     align-items: center;
@@ -49,7 +56,8 @@ div{
     margin-left: 20px;
     border-radius: 20px;
     border: 2px black solid;
-}
+    background-color: aliceblue;
+}**/
 h3{
     font-size: 20px;
 }
@@ -57,4 +65,33 @@ img{
     height: 100px;
     width: auto;
     border-radius: 20%;
+}
+
+#tienda{
+    display: flex;
+    align-items: center;
+    
+    height: 5vh;
+    width: 5vw;
+    border-radius: 20px;
+    background-color: #ced2d3;
+    border: 2px solid;
+
+}
+.texto_centrado{
+    text-align: center;
+    font-size: 300%;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.especiales{
+    height: 7vh;
+    width: 30%;
+    border-radius: 10px;
+
 }
