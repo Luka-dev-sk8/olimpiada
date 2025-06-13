@@ -8,14 +8,14 @@ header{
     flex-wrap: wrap;
     gap: 8%;
     padding: 5px;
-    height: 30%;
+    height: auto;
     box-shadow: 0px 0px 20px 0px black;
 }
 button{
     height: 5vh;
     width: 90px;
     border: unset;
-    background-color: aliceblue;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 button:hover{
@@ -24,7 +24,10 @@ button:hover{
 }
 body{
     margin: 0;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 main{
     display: flex;
@@ -40,34 +43,43 @@ svg{
 }
 .conteiner{
     background: linear-gradient(to bottom, #92cadd, #6be26b);
-    
-    height: 80vh;
-    padding-bottom: 10%;
-    
+    height: auto;
+    width: 100%;
+    padding-bottom: 10%;    
 }
-/**div{
-    flex: 1 0 auto;
+.conteiner2{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
-    height: 250px;
-    width: 160px;
-    font-size: 15px;
-    padding: 20px;
-    margin-left: 20px;
-    border-radius: 20px;
-    border: 2px black solid;
+
     background-color: aliceblue;
-}**/
-h3{
-    font-size: 20px;
+    box-shadow: 0px 0px 10px 0px black;
+    border-radius: 20px;
+    height: 30vh;
+    width: 80vw;
+    margin-top: 2%;
 }
-img{
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+    list-style-position: outside;
+    margin: 0;
+    padding: 5px;
     
-    height: 30px;
+    width:100%;
+    
+}
+li{
+
+    display: inline;
+}
+h3{ font-size: 20px; }
+img{ height: 30px;
     width: auto;
-    
 }
 
 #tienda{
