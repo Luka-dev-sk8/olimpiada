@@ -4,6 +4,8 @@ header{
     justify-content: center;
     flex-direction: column;
     background-color: #f1f1f1;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #menu{
     display: flex;
@@ -13,18 +15,22 @@ header{
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
+    gap: 4%;
+    
+    
 }
-button{
+.barra{
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1 0 auto;
-    height: 6vh;
-    width: 30%;
-    border: unset;
+    height: 40px;
+    width: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-button:hover{
+.barra:hover{
     background-color: gray;
     transition: 0.4s;
 }
@@ -131,16 +137,14 @@ img{ height: 30px;
 }
 #promociones{
     background-color: #a7e7fc;
-    height: 6vh;
-    width: 90px;
+    height: 7vh;
     border: unset;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 2%;
 }
 #explo_destinos{
     background-color: #85ff85;
-    height: 6vh;
-    width: 90px;
+    height: 7vh;
     border: unset;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 2%;
@@ -148,9 +152,17 @@ img{ height: 30px;
 #promociones:hover{
     background-color: #8ec4d6;
 }
+#explo_destino:hover{
+    background-color: #67c967;
+}
 #subir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 6vh;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #76e476;
     border-radius: 10px;
-    
+    border: unset;
 }
