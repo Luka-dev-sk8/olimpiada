@@ -1,7 +1,21 @@
 {
   "dependencies": {
     "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "nodemailer": "^7.0.3"
-  }
+  },
+  "name": "olimpiada",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/enviar_gmail.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
