@@ -168,7 +168,13 @@ img{ height: auto;
 
 
 
+#caja_datos{
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
 
+}
 .conteiner3{
     background-color: #f1f1f1;
 
