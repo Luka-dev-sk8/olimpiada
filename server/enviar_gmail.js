@@ -10,15 +10,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Verificación (opcional) - imprimí para confirmar que se lee bien
+// Verificación  - imprimí para confirmar que se lee bien
 console.log('Usuario:', process.env.GMAIL_USER);
 console.log('Clave cargada:', process.env.GMAIL_PASS ? '✅' : '❌');
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'serminosaxel@gmail.com',
-        pass: 'zjucddkhnlmerovk'
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
     }
 });
 
