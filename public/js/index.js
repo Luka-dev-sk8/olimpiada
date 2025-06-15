@@ -1,8 +1,8 @@
 const btn = document.getElementById('barra_lateral');
 const cajaL = document.getElementById('caja_desplegable');
     
-    btn.addEventListener('click', () => {
-            
+    btn.addEventListener('click', event => {
+            event.stopPropagation();
             if (cajaL.style.display === 'none') {
                 cajaL.style.display = 'flex';
             } else {
@@ -10,7 +10,11 @@ const cajaL = document.getElementById('caja_desplegable');
             }
         });
         
-        
+        document.addEventListener('click', function(event) {
+            if (!cajaL.contains(event.target) && event.target !== btn) {
+                cajaL.style.display = 'none';
+            }
+        });
 
 
 const pasar = document.getElementById('pasar_pagina')
