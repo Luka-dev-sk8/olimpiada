@@ -19,5 +19,5 @@ const cajaL = document.getElementById('caja_desplegable');
 
 const pasar = document.getElementById('pasar_pagina')
 pasar.addEventListener('click', () =>{
-    window.location.href = '/public/Registro_inicioSE.html';
+    window.location.href = 'public/Registro_inicioSE.html';
 })
