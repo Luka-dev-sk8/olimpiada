@@ -1,0 +1,159 @@
+
+/* puse border a cada cosa que tenia estilo.
+para que sepas en que parte de la pagina afectan,
+ si queres borralos, solo son guias*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
+    width: 100%;
+    height: 100vh;
+    background-color:   #f1f1f1;
+}
+.container{
+    display: grid;
+    grid-template-columns: 4.2fr 5fr 0.8fr ;
+    align-items: center;
+    width: 57.25rem;
+    height: 31rem;
+}
+
+.forms-container{
+    border: 2px solid blue;
+    height: 100%;
+    background-color: gray;
+    overflow: hidden; /* no borres el overflow luka, gil*/
+}
+.forms{
+    transition: transform 0.5s ease;/* en mi defensa, me gusto la animacion de un video*/
+}
+.forms.active{
+    transform: translateY(-50%);
+}
+form{
+    border: 2px solid tan;
+    padding: 1.8rem;
+    height: 500px;
+
+}
+form p{
+    border: 2px solid green;
+    font-size: 0.85rem;
+    color: black;
+    margin-top: 0.03rem;
+    margin-bottom: 1.8rem;
+}
+form p a{
+    border: 2px solid red;
+    font-weight: 700;
+}
+
+.input-container{
+    border: 2px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.input-container input{
+    padding: 0.7rem;
+    border: 2px solid darkkhaki;
+}
+
+.input-container label,
+.input-container a{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.input-container .forget{
+    border: 2px purple;
+    display: flex;
+    justify-content: space-between;
+
+}
+form button{
+   width: 100%;
+   padding: 0.9rem 0;
+   background-color: #76e476;
+   color: black;
+   border: none;
+   font-weight: 500;
+   border-radius: 0.5rem;
+   margin-bottom: 0.3rem;
+   cursor: pointer;
+}
+form .button-register{
+    margin-top: 1.5rem;
+}
+.banner{
+    border: 2px solid black;
+    height: 115%;
+    padding: 5rem 2rem 0 2rem;
+    position: relative;
+    background-color: darkkhaki;
+}
+.banner h1{
+    border: 2px solid royalblue;
+    color: black;
+    font-size: 3rem;
+    line-height: 0.9;
+}
+.banner h1 span{
+    border: 2px solid black;
+    display: block;
+    font-weight: 500;
+}
+.banner p{
+    border: 2px solid blueviolet;
+    color: black;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+.sidebar{
+    border: 2px solid red;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    user-select: none; 
+}
+.sidebar::after{
+    content: '';
+    background-color: #76e476;
+    height: 50%;
+    width: 0.3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: top 0.5s ease;
+}
+.sidebar.active::after{
+    top: 50%;
+}
+.sidebar .sign{
+    border: 2px solid greenyellow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+.sidebar span{
+    color: black;
+    font-size: 0.8rem ;
+
+}

@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre el Cielo</title>
+    <link rel="stylesheet" href="/public/estilos/estilos_registro_Y_inicio.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="forms-container">
+            <div class="forms" id="forms">
+                <form action="">
+                    <h2>INICIO SESION</h2>
+                    <p>aun no estas registrado? <a href="#">registrarse</a></p>
+                    
+                    <div class="input-container">
+                        <label for="email">correo electronico</label>
+                        <input type="email" id="email" placeholder="nombre@gmail.com">
+                    </div>
+                    <div class="input-container">
+                        <div class="forget">
+                            <label for="password">contraseña</label>
+                        </div>
+                        <input type="password" id="password" placeholder="password">
+                    </div>
+                    <button>INICIAR SESION</button>
+                    
+                </form>
+                <form action="">
+                    <h2>REGISTRO</h2>
+                    <p>usted ya esta registrado? <a href="#">iniciar SESION</a></p>
+                    <div class="input-container">
+                        <label for="name">nombre del usuario </label>
+                        <input type="text" id="name" placeholder="nombre usuario">
+                    </div>
+                    <div class="input-container">
+                        <label for="email">correo electronico</label>
+                        <input type="email" id="email" placeholder="nombre@gmail.com">
+                    </div>
+                    <div class="input-container">
+                        <label for="password">contraseña</label>
+                        <input type="password" id="password" placeholder="password">
+                    </div>
+                    <button class="button-register">REGISTRAR</button>
+                    
+                </form>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <section>
+                <h1>explora el mundo <span>sobre el cielo</span></h1>
+                <p>inicia sesion y emprende a una nueva aventura</p>
+            </section>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <button class="sign" id="btn-sign-in"> 
+                <img src="" alt="">
+                <span>INICIO SESION</span>
+            </button>
+            <button class="sign" id="btn-sign-up"> 
+                <img src="" alt="">
+                <span>REGISTRO</span>
+            </button>
+        </div>
+    </div>
+    <script src="/public/js/inicio de sesion.js"></script>
+    <script src="/public/js/registro.js"> </script>
 </body>
 </html>
