@@ -1,10 +1,8 @@
-function barra(){
-
-    const btn = document.getElementById('barra_lateral');
-    const cajaL = document.getElementById('caja_desplegable');
+const btn = document.getElementById('barra_lateral');
+const cajaL = document.getElementById('caja_desplegable');
     
-    btn.addEventListener('click', event => {
-            event.stopPropagation();
+    btn.addEventListener('click', () => {
+            
             if (cajaL.style.display === 'none') {
                 cajaL.style.display = 'flex';
             } else {
@@ -12,13 +10,8 @@ function barra(){
             }
         });
         
-        document.addEventListener('click', function(event) {
-            if (!cajaL.contains(event.target) && event.target !== btn) {
-                cajaL.style.display = 'none';
-            }
-        });
-}
-barra()
+        
+
 
 const pasar = document.getElementById('pasar_pagina')
 pasar.addEventListener('click', () =>{
