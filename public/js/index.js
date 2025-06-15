@@ -3,7 +3,7 @@ function barra(){
     const btn = document.getElementById('barra_lateral');
     const cajaL = document.getElementById('caja_desplegable');
     
-    btn.addEventListener('click', function(event) {
+    btn.addEventListener('click', event => {
             event.stopPropagation();
             if (cajaL.style.display === 'none') {
                 cajaL.style.display = 'flex';
@@ -18,4 +18,9 @@ function barra(){
             }
         });
 }
-barra()        
+barra()
+
+const pasar = document.getElementById('pasar_pagina')
+pasar.addEventListener('click', () =>{
+    window.location.href = '/public/Registro_inicioSE.html';
+})
