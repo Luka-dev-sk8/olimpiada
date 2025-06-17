@@ -14,6 +14,33 @@ const config = {
     }
 };
 
+app.post('/insertData', async (req, res) =>{
+    console.log(">>req.body",req.body);
+    const{nombre,email,contraseña} = req.body;
+
+    try{
+        let pool = await sql.connect(config);
+
+        let result = await pool.request()
+        .input('email', sql.VarChar,email)
+        .query("SELECT COUNT (*) AS count FROM Clientes WHERE email = @email");
+        console.log('registros con ese correo',result.recordset[0].count);
+
+        if(result.recordset[0].count >0){
+            return res.status(400).json({message: 'el correo ya esta registrado'
+            });
+        }
+
+        await pool.request()
+
+
+    }catch (err) {
+        console.error('Error ejecutando la consulta', err);
+        return res.status(500).json({ message: 'Error insertando datos.' });
+    }
+
+});
+
 const poolPromise = new sql.ConnectionPool(config)
     .connect()
     .then(pool => {

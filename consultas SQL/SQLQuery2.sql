@@ -56,3 +56,6 @@ CREATE TABLE Correos (
     email_empresa NVARCHAR(255) NOT NULL,
     fecha_envio DATETIME DEFAULT GETDATE()
 );
+
+
+select * from Clientes

@@ -1,60 +1,66 @@
+const nombre = document.getElementById("name")
+const correo = document.getElementById('R_email')
+const contraseña = document.getElementById('R_password')
+const form = document.getElementById('registro')
+const parrafo = document.getElementById('warning')
+const parrafo2 = document.getElementById('warning2')
+const parrafo3 = document.getElementById('warning3')
+ 
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const formularioRegistro = document.querySelector('.forms form:nth-child(2)');
+async function enviarDatos() {
+    const nombreValue = nombre.value;
+    const correoValue = correo.value;
+    const contraseñaValue = contraseña.value;
 
 
-formularioRegistro.addEventListener('submit', function(event) {
-    event.preventDefault(); 
 
-    //logica sacada de estudIAAR
-    const inputs = this.querySelectorAll('input');
-    const nombre = inputs[0].value.trim();
-    const email = inputs[1].value.trim();
-    const password = inputs[2].value.trim();
-
-    
-    const errores = [];
-
-    
-    if (nombre === '') {
-        errores.push("El nombre de usuario no puede estar vacío.");
-    } else if (nombre.length <= 4) {
-        errores.push("El nombre de usuario debe tener más de 4 caracteres.");
+    if (!nombreValue || !correoValue || !contraseña){
+        parrafo2.innerHTML = "todos los campos son necesarios"
+        return false;
     }
-
     
-    if (email === '') {
-        errores.push("El correo electrónico no puede estar vacío.");
-    } else if (!emailRegex.test(email)) {
-        errores.push("El correo electrónico no es válido.");
-    }
+}
 
-    
-    if (password === '') {
-        errores.push("La contraseña no puede estar vacía.");
-    } else if (password.length < 8) {
-        errores.push("La contraseña debe tener al menos 8 caracteres.");
-    }
 
-    //parte sacada de pagina infra
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+form.addEventListener("submit",async e =>{
+e.preventDefault();
 
-    
-    if (usuarios.some(usuario => usuario.email === email)) {
-        errores.push("El correo electrónico ya está registrado.");
-    }
+let warning = ""
+let warning2 = ""
+let warning3 = ""
+let entrar = false
+let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    
-    if (errores.length > 0) {
-        errores.forEach(error => console.error(error));
-    } else {
-        
-        const nuevoUsuario = { nombre, email, password };
-        usuarios.push(nuevoUsuario);
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        console.log("Usuario registrado exitosamente.");
-        
-        window.location.href = "/index.html";
+if(nombre.value.length <6){
+    warning += 'el nombre no es valido '
+    entrar = true
+}
+
+if(!regexEmail.test(correo.value)){
+    warning2 += "email no es valido "
+    entrar = true
+}
+
+if(contraseña.value.length <8){
+    warning3 += "contraseña de 8 caracteres"
+    entrar = true
+}
+
+if(entrar){
+
+parrafo.innerHTML = warning
+parrafo2.innerHTML = warning2
+parrafo3.innerHTML = warning3
+
+warning = ""
+warning2 = ""
+warning3 = ""
+} else {
+    const enviarDatosResult = await enviarDatos();
+    if(enviarDatos){
+        window.location = '/index.html'
     }
-});
+}
+
+})
