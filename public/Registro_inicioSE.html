@@ -28,22 +28,25 @@
                     <button>INICIAR SESIÓN</button>
                     
                 </form>
-                <form action="">
+                <form id="registro">
                     <h2>REGISTRO</h2>
                     <p>Usted ya esta registrado? <a href="#">Iniciar Sesión</a></p>
                     <div class="input-container">
                         <label for="name">nombre del usuario </label>
-                        <input type="text" id="name" placeholder="nombre usuario">
-                    </div>
+                        <input type="text" id="name" name="nombre" placeholder="nombre usuario">
+                        <span id="warning"  ></span> 
+                    </div> 
                     <div class="input-container">
                         <label for="email">correo electronico</label>
-                        <input type="email" id="email" placeholder="nombre@gmail.com">
+                        <input type="email" id="R_email" name="correo_electronico" placeholder="nombre@gmail.com">
+                        <span id="warning2"></span> 
                     </div>
                     <div class="input-container">
                         <label for="password">contraseña</label>
-                        <input type="password" id="password" placeholder="password">
+                        <input type="password" id="R_password" name="contraseña" placeholder="password">
+                        <span id="warning3"></span> 
                     </div>
-                    <button class="button-register">REGISTRAR</button>
+                    <button class="button-register" id="enviar" type="submit">REGISTRAR</button>
                     
                 </form>
             </div>
