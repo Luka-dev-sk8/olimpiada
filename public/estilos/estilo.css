@@ -213,13 +213,10 @@ img{ height: auto;
 
 }
 .caja{
-    
     gap: 25%;
     flex-wrap: wrap;
-    
-
 }
-.tarjeta{
+.tarjeta, .currusuel{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +224,7 @@ img{ height: auto;
     box-shadow: 0 0 5px 0 gray;
     width: 40ch;
     margin-top: 30px;
-    border-radius: 20px ;
+    border-radius: 20px;
     background-color: #141414;
     
 }
@@ -290,8 +287,6 @@ h4{
     transition: 0.4s;
     animation: compra;
     animation: compra 2s infinite;
-    
-    
 }
 @keyframes compra {
     0%{
