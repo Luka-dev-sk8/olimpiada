@@ -1,10 +1,4 @@
 
-/* puse border a cada cosa que tenia estilo.
-para que sepas en que parte de la pagina afectan,
- si queres borralos, solo son guias*/
- 
-/*no entendi una nada 
-                atte: luka*/
 *{
     margin: 0;
     padding: 0;
@@ -34,10 +28,10 @@ body{
     
     height: 100%;
     box-shadow: 0 0 10px 0;
-    overflow: hidden; /* no borres el overflow luka, gil*/
+    overflow: hidden;
 }
 .forms{
-    transition: transform 0.5s ease;/* en mi defensa, me gusto la animacion de un video*/
+    transition: transform 0.5s ease;
 }
 .forms.active{
     transform: translateY(-50%);

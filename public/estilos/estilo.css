@@ -291,6 +291,7 @@ h4{
     animation: compra;
     animation: compra 2s infinite;
     
+    
 }
 @keyframes compra {
     0%{
