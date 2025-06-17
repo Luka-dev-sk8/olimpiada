@@ -74,21 +74,28 @@ body{
 }
 main{
     display: flex;
-    align-items: center;
+    align-items: end;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 2%;
     
+}
+#fondo{
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 svg{
     height: 4.5vh;
     width: 10%;
 }
+
 .conteiner, .conteiner3{
     background: linear-gradient(to bottom, #a7e7fc, #81f781);
-    height: auto;
+    
     width: 100%;
-    padding-bottom: 10%;    
+    margin-bottom: 20px;
 
 }
 .conteiner2{
@@ -104,8 +111,11 @@ svg{
     padding: 2%;
 }
 .img_carru{
-    height: auto;
-    width: 50%;
+    flex: 1 0 auto;
+    height: 300px;
+    width: auto;
+    box-shadow: 0 0 10px 0 #141414;
+    margin: 2%;
 }
 .formulario{
     display: flex;
@@ -123,8 +133,6 @@ svg{
     width: 100%;
     height: auto;
 }
-
-
 h3{ 
     font-size: 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -200,10 +208,7 @@ img{ height: auto;
     right: 200px;
 
 }
-.conteiner3{
-    background-color: #f1f1f1;
-
-}
+.conteiner3{background-color: #f1f1f1;}
 .caja{
     gap: 25%;
     flex-wrap: wrap;
@@ -222,9 +227,12 @@ img{ height: auto;
 }
 .carrusuel{
     display: flex;
+    align-items: center;
     overflow-x: scroll;
     flex-wrap: nowrap;
     gap: 10px;
+    width: 100%;
+    
 }
 .ofertas_img, .ofertas_imgC{
     display: flex;
