@@ -105,22 +105,9 @@ form .button-register{
     height: 115%;
     padding: 5rem 2rem 0 2rem;
     position: relative;    
-    background-image: url(/public/imagenes/Diseño\ de\ fondo.png);
+    background-image: url(/public/imagenes/flayer.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.banner h1{
-    
-    font-size: 2.5rem;
-    width: 110%;
-    line-height: 1;
-    
-}
-.banner h1 span{
-    width: 120%;
-    display: block;
-    font-weight:500;
+    background-size: 100% 100%;   
 }
 .banner p{
     background-color: #f1f1f1;
