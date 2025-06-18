@@ -29,8 +29,6 @@ pasa.addEventListener('click', () =>{
 
 
 
-
-
 const submenu = document.querySelector('.submenu');
 const boton_abrir = document.querySelector('.open_submenu');
 
@@ -46,3 +44,19 @@ const boton_abrir = document.querySelector('.open_submenu');
                     submenu.classList.remove('aparece')
                 }
         });
+
+
+document.addEventListener('DOMContentLoaded',() =>{
+    const botonesAgregar = document.querySelectorAll('.agg_carrito');
+    botonesAgregar.forEach(boton =>{
+        boton.addEventListener('click',(e)=>{
+            const productoDiv = e.target.closest('.producto')
+            const id = productoDiv.getAttribute('data-id');
+            const text = productoDiv.getElementById('');
+            const text_P = productoDiv.querySelector('').textContent.trim();
+            const [textoS,precio] = text.slipt('$');
+
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        })
+    })
+})

@@ -79,7 +79,7 @@ form_S.addEventListener("submit",async e =>{
 
     const result = await verificarData(correoValue_S,passwordValue_S);
     if(!result){
-        parrafo_S.textContent = "no se puedo verificar";
+        parrafo_S.textContent = "no se puedo verificar(falta sql server DB)"; //al no estar conectado la base de datos por el node.js, tirara este error
         return;
     }
 
