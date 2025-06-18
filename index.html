@@ -22,10 +22,12 @@
                 <div style="flex-direction: column;" class="menu2">
                     
                     <div id="caja_desplegable">
+                        <button class="barra"><b>Inicio</b></button>
                         <button id="pasar_pagina" class="barra"><img src="public/imagenes/contacto.png" alt=""></button>
-                        <button class="barra"><img src="public/imagenes/compras.png" alt=""></button>
+                        <button class="barra"><img src="public/imagenes/reserva.png" alt=""></button>
                         <button class="barra"><img src="public/imagenes/ubicacion.png" alt=""></button>
                         <button id="pasar_carrito" class="barra"><img src="public/imagenes/carrito.png" alt=""></button>
+                        <button class="barra"><img src="" alt=""><b>Contactos</b></button>
                         
                     </div>
                 </div>
@@ -37,7 +39,7 @@
             <button id="explo_destinos" class="especiales"><b>Explorar Destinos</b></button>
         </main>
     </div>
-    <form class="conteiner2">
+    <div class="conteiner2">
         <div>
             <h3>Busca tu próxima aventura</h3>
         </div>
@@ -50,8 +52,8 @@
         
         
         
-    </form>
-    <div class="conteiner3">
+    </div>
+    <div class="conteiner">
     <h1 class="texto_centrado">Promociones Destacadas</h1>
     <p class="descripcion">Descubre nuestras mejores ofertas y paquetes especiales para que disfrutes de vacaciones inolvidable</p>
     
@@ -113,7 +115,88 @@
             
             
         </div>      
-        <script defer src="public/js/index.js"></script>
+    <div class="conteiner">
+        <h1>Nuestros Destinos</h1>
+        <p>Explora nuestros destinos más populares en Argentina y alrededor del mundo</p>
         
+        <br><br>
+        
+        <div>
+            <button class="opciones">Argentina</button>
+            <button class="opciones">El Mundo</button>
+
+        <hr>
+        <main class="caja">
+
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/Paris2.jpeg);" class="ofertas_img">
+                        
+                        <h3>Paris <br> Francia</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>La ciudad del amor con su iconica Torre Eiffel y museos.</p>
+                            
+                            <div class="precios">
+                                  
+                                <h5 style="color: black;"><b>Desde $450.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                    </div>
+            </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/tokio.jpeg);" class="ofertas_img">
+                        
+                        <h3>Tokio <br>Japón</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>Tradición y modernidad en la fascinante capital japonesa.</p>
+                            
+                            <div class="precios">
+                                <h5 style="color: black;"><b>Desde $520.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>  
+                    </div>
+            </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/cancun.jpeg);" class="ofertas_img">
+                        
+                        <h3>Cancún</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>Playa paradisíacas, hospedaje con todo incluido y excursiones a los mejores cenotes y ruinas mayas.</p>
+                            
+                            <div class="precios">
+                                <h5>Antes $320.000</h5>  
+                                <h5 style="color: black;"><b>Ahora $275.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/cancun.jpeg);" class="ofertas_img">
+                        
+                        <h3>Cancún</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>Playa paradisíacas, hospedaje con todo incluido y excursiones a los mejores cenotes y ruinas mayas.</p>
+                            
+                            <div class="precios">
+                                <h5>Antes $320.000</h5>  
+                                <h5 style="color: black;"><b>Ahora $275.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+        </div>
+        </main>
+        <script defer src="public/js/index.js"></script>
+    
 </body>
 </html>
