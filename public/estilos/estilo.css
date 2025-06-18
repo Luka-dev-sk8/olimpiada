@@ -7,9 +7,8 @@ header{
     box-shadow: 0 0 10px 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-a{
-    height: 20px;
-    text-align: center;
+#conta{
+    font-size: 40%;
 }
 #btn{
     display: inline-block;
@@ -54,7 +53,7 @@ a{
 #caja_desplegable{
     display: none;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     background-color: #f1f1f1;
     border-radius: 0 0 20px 20px ;
@@ -73,8 +72,6 @@ a{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
     gap: 4%;
-    
-    
 }
 #ajuste{
     height: auto;
@@ -85,15 +82,15 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    
     height: 40px;
     width: 50px;
     border-radius: 20px;
     border: unset;
     box-shadow: 0 0 3px 0 #141414;
-    padding: 20px;
+    
     margin: 4px;
     cursor: pointer;
-    
 }
 #barra_lateral{
     display: flex;
@@ -229,21 +226,24 @@ img{ height: auto;
 }
 #promociones{
     background-color: #a7e7fc;
-    height: 6vh;
+    height: 4vh;
     border: unset;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 2%;
-    padding-top: 1.5%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 1%;
     text-decoration: unset;
+    text-align: center;
 }
 #explo_destinos{
     background-color: #85ff85;
-    height: 6vh;
+    height: 4vh;
     border: unset;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 2%;
-    padding-top: 1.5%;
+    margin-bottom: 10px;
+    padding: 1%;
     text-decoration: unset;
+    text-align: center;
 }
 #promociones:hover{
     background-color: #8ec4d6;
@@ -310,7 +310,6 @@ img{ height: auto;
     background-position: center center;
 
 }
-
 h4{
     background-color: #f1f1f1;
     height: 10px;
