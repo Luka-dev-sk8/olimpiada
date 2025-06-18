@@ -11,21 +11,23 @@
     <div class="container">
         <div class="forms-container">
             <div class="forms" id="forms">
-                <form action="">
+                <form id="sesion">
                     <h2>INICIO SESIÓN</h2>
                     <p>Aún no estas registrado? <a href="#">Registrarse</a></p>
                     
                     <div class="input-container">
                         <label for="email">correo electronico</label>
                         <input type="email" id="email" placeholder="nombre@gmail.com">
+                        <span id="warning_S"> </span>
                     </div>
                     <div class="input-container">
                         <div class="forget">
                             <label for="password">contraseña</label>
                         </div>
                         <input type="password" id="password" placeholder="password">
+                        <span id="warning_S2"></span>
                     </div>
-                    <button>INICIAR SESIÓN</button>
+                    <button type="submit">INICIAR SESIÓN</button>
                     
                 </form>
                 <form id="registro">
@@ -67,6 +69,7 @@
             </button>
         </div>
     </div>
+    
     <script src="js/inicio de sesion.js"></script>
     <script src="js/registro.js"> </script>
 </body>

@@ -9,7 +9,8 @@
   },
   "name": "olimpiada",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "conexionDB.js",
+  
   "scripts": {
     "start": "node server/conexionDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"

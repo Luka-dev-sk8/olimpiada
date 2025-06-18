@@ -1,24 +1,54 @@
-document.getElementById('formulario').addEventListener('submit', async (e) => {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const btnEnviar = document.getElementById('Enviar');
 
-    const email = document.getElementById('email').value;
-    const pedidoId = document.getElementById('pedido_id').value;
-    const mensaje = document.getElementById('mensaje');
+    btnEnviar.addEventListener('click', async () => {
+        console.log('Evento click disparado');
 
-    try {
-        const res = await fetch('http://localhost:3000/enviar-correo', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `email=${encodeURIComponent(email)}&pedido_id=${encodeURIComponent(pedidoId)}`
-        });
+        const emailInput = document.getElementById('email_com');
+        const mensaje = document.getElementById('mensaje');
+        const email = emailInput.value.trim();
 
-        const text = await res.text();
-        mensaje.textContent = text;
-        mensaje.style.color = res.ok ? 'green' : 'red';
-    } catch (error) {
-        mensaje.textContent = 'Error al enviar la solicitud.';
-        mensaje.style.color = 'red';
-    }
+        // Validación
+        if (!email || !mensaje) {
+            console.error('Elemento email o mensaje no encontrado');
+            return;
+        }
+
+        const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!regexEmail.test(email)) {
+            mensaje.textContent = 'Por favor, ingrese un correo válido';
+            mensaje.style.color = 'red';
+            return;
+        }
+
+        try {
+            console.log('Enviando solicitud a: http://localhost:3000/enviar-comprobante');
+            const res = await fetch('http://localhost:3000/enviar-comprobante', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            console.log('Respuesta recibida:', res.status, res.statusText);
+
+            const responseData = await res.json();
+
+            if (!res.ok) {
+                console.error('Error:', responseData.message);
+                mensaje.textContent = `Error: ${responseData.message}`;
+                mensaje.style.color = 'red';
+                return;
+            }
+
+            mensaje.textContent = responseData.message || 'Comprobante enviado correctamente';
+            mensaje.style.color = 'green';
+
+        } catch (error) {
+            console.error('Error en la solicitud:', error);
+            mensaje.textContent = 'Error de conexión. Intente de nuevo.';
+            mensaje.style.color = 'red';
+        }
+    });
 });
