@@ -21,3 +21,10 @@ const pasar = document.getElementById('pasar_pagina')
 pasar.addEventListener('click', () =>{
     window.location.href = 'public/Registro_inicioSE.html';
 })
+
+
+
+const pasa = document.getElementById('pasar_carrito')
+pasa.addEventListener('click', () =>{
+    window.location.href = 'public/carrito.html';
+})
