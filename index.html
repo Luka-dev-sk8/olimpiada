@@ -9,6 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="public/estilos/poppins.css">
+        <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js" defer></script>
+        <script src="https://files.bpcontent.cloud/2025/06/18/02/20250618025352-W83U4J8S.js" defer></script>
+    
     </head>
     <body>
         <div class="conteiner">
@@ -37,7 +40,7 @@
                         <button class="barra"><b>Inicio</b></button>
                         <button id="pasar_pagina" class="barra"><img src="public/imagenes/contacto.png" alt=""></button>
                         <button class="barra"><img src="public/imagenes/reserva.png" alt=""></button>
-                        <button class="barra"><img src="public/imagenes/ubicacion.png" alt=""></button>
+                        <a href="#Destinos" class="barra"><img src="public/imagenes/ubicacion.png" alt=""></a>
                         <button id="pasar_carrito" class="barra"><img src="public/imagenes/carrito.png" alt=""></button>
                         <button class="barra"><img src="" alt=""><b>Contactos</b></button>
                         
@@ -47,8 +50,8 @@
         </header>
                 
         <main id="fondo" style="background-image: url(public/imagenes/Diseño\ sin\ título.png);">
-            <button id="promociones" class="especiales"><b>Ver Promociones</b></button>
-            <button id="explo_destinos" class="especiales"><b>Explorar Destinos</b></button>
+            <a href="#Promocion" id="promociones" class="especiales"><b>Ver Promociones</b></a>
+            <a href="#Destinos" id="explo_destinos" class="especiales"><b>Explorar Destinos</b></a>
         </main>
     </div>
     <div class="conteiner2">
@@ -66,7 +69,7 @@
         
     </div>
     <div class="conteiner">
-    <h1 class="texto_centrado">Promociones Destacadas</h1>
+    <h1 id="Promocion" class="texto_centrado">Promociones Destacadas</h1>
     <p class="descripcion">Descubre nuestras mejores ofertas y paquetes especiales para que disfrutes de vacaciones inolvidable</p>
     
     <main class="caja">
@@ -133,7 +136,7 @@
         
         <br><br>
         
-        <div>
+        <div id="Destinos">
             <button class="opciones">Argentina</button>
             <button class="opciones">El Mundo</button>
 
