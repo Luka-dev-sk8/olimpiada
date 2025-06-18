@@ -73,6 +73,46 @@ app.post('/insertData', async (req, res) =>{
 });
 
 
+app.post('/verificarData',async(req,res) =>{
+    console.log('payload recibido: ',req.body);
+    const{email,contraseña} = req.body;
+    try{
+        const pool = await sql.connect(config);
+
+        const correoResult = await pool.request()
+        .input('email',sql.VarChar, email)
+        .query(' SELECT COUNT (*) AS count FROM Clientes WHERE email = @email ');
+        const correoExiste = correoResult.recordset[0].count >0;
+        
+        //pruebas de datos (luego borrar)
+        console.log('parametros pasados a SQL',{
+            correo: email,
+            pass: contraseña
+        });
+
+        let contraseñaExiste = false;
+        if(correoExiste){
+            const passResult = await pool.request()
+            .input('email',sql.VarChar,email)
+            .input('pass', sql.VarChar, contraseña)
+            .query(' SELECT COUNT (*) AS count FROM Clientes WHERE email = @email AND contraseña = @pass');
+
+            contraseñaExiste = passResult.recordset[0].count >0;
+            console.log(" Resultado de la comprobacion de contraseña: ",contraseñaExiste);
+        }
+
+        return res.status(200).json({correoExiste,contraseñaExiste});
+
+
+    }catch (err) {
+      console.error('Error verificando datos', err);
+      return res.status(500).json({ message: 'Error en servidor verificando datos.' });
+    }
+
+
+})
+
+
 app.post('/enviar-correo', async (req, res) => {
     const { email, pedido_id } = req.body;
 
@@ -142,6 +182,8 @@ app.post('/enviar-correo', async (req, res) => {
         res.status(500).send('Error en el servidor');
     }
 });
+
+
 
 
 app.listen(3000, () => {
