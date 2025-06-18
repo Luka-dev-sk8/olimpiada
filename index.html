@@ -3,12 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Sobre Cielo</title>
         <link rel="stylesheet" href="public/estilos/estilo.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="public/estilos/poppins.css">
+        <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js" defer></script>
+        <script src="https://files.bpcontent.cloud/2025/06/18/02/20250618025352-W83U4J8S.js" defer></script>
+    
     </head>
     <body>
         <div class="conteiner">
@@ -16,28 +19,42 @@
             <header>
             <div class="menu">
                 <h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><path d="M482.3 192c34.2 0 93.7 29 93.7 64c0 36-59.5 64-93.7 64l-116.6 0L265.2 495.9c-5.7 10-16.3 16.1-27.8 16.1l-56.2 0c-10.6 0-18.3-10.2-15.4-20.4l49-171.6L112 320 68.8 377.6c-3 4-7.8 6.4-12.8 6.4l-42 0c-7.8 0-14-6.3-14-14c0-1.3 .2-2.6 .5-3.9L32 256 .5 145.9c-.4-1.3-.5-2.6-.5-3.9c0-7.8 6.3-14 14-14l42 0c5 0 9.8 2.4 12.8 6.4L112 192l102.9 0-49-171.6C162.9 10.2 170.6 0 181.2 0l56.2 0c11.5 0 22.1 6.2 27.8 16.1L365.7 192l116.6 0z"/></svg><b>Sobre Cielo</b></h1>
-                
                 <button id="barra_lateral"><img id="ajuste" src="public/imagenes/menu.png" alt=""></button>
+                
+                    <li class="open_submenu">
+                        <button id="btn">
+                            <img src="public/imagenes/carrito-de-compras.png" alt="">
+                        </button>
+                        <div class="submenu">
+                            <h4>insertar imagen</h4>
+                            <h4>producto tal</h4>
+                            <p>precio $5555555</p>
+                        </div>
+                    </li>
+                
             </div>
                 <div style="flex-direction: column;" class="menu2">
                     
+                        
                     <div id="caja_desplegable">
+                        <button class="barra"><b>Inicio</b></button>
                         <button id="pasar_pagina" class="barra"><img src="public/imagenes/contacto.png" alt=""></button>
-                        <button class="barra"><img src="public/imagenes/compras.png" alt=""></button>
-                        <button class="barra"><img src="public/imagenes/ubicacion.png" alt=""></button>
+                        <button class="barra"><img src="public/imagenes/reserva.png" alt=""></button>
+                        <a href="#Destinos" class="barra"><img src="public/imagenes/ubicacion.png" alt=""></a>
                         <button id="pasar_carrito" class="barra"><img src="public/imagenes/carrito.png" alt=""></button>
+                        <button id="conta" class="barra"><img src="" alt=""><b>Contactos</b></button>
                         
                     </div>
                 </div>
                     
         </header>
                 
-        <main id="fondo" style="background-image: url(public/imagenes/Diseño\ sin\ título.png);">
-            <button id="promociones" class="especiales"><b>Ver Promociones</b></button>
-            <button id="explo_destinos" class="especiales"><b>Explorar Destinos</b></button>
+        <main id="fondo" style="background-image: url(public/imagenes/Flyer\ Horizontal\ Viajes\ Moderno\ Azul\ y\ Blanco_20250618_180724_0000.jpg);">
+            <a href="#Promocion" id="promociones" class="especiales"><b>Ver Promociones</b></a>
+            <a href="#Destinos" id="explo_destinos" class="especiales"><b>Explorar Destinos</b></a>
         </main>
     </div>
-    <form class="conteiner2">
+    <div class="conteiner2">
         <div>
             <h3>Busca tu próxima aventura</h3>
         </div>
@@ -50,9 +67,9 @@
         
         
         
-    </form>
-    <div class="conteiner3">
-    <h1 class="texto_centrado">Promociones Destacadas</h1>
+    </div>
+    <div class="conteiner">
+    <h1 id="Promocion" class="texto_centrado">Promociones Destacadas</h1>
     <p class="descripcion">Descubre nuestras mejores ofertas y paquetes especiales para que disfrutes de vacaciones inolvidable</p>
     
     <main class="caja">
@@ -113,7 +130,87 @@
             
             
         </div>      
-        <script defer src="public/js/index.js"></script>
+    <div class="conteiner">
+        <h1>Nuestros Destinos</h1>
+        <p>Explora nuestros destinos más populares en Argentina y alrededor del mundo</p>
         
+        <br><br>
+        
+        <div id="Destinos">
+            <button class="opciones">Argentina</button>
+            <button class="opciones">El Mundo</button>
+
+        <hr>
+        <main class="caja">
+
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/Paris2.jpeg);" class="ofertas_img">
+                        
+                        <h3>Paris <br> Francia</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>La ciudad del amor con su iconica Torre Eiffel y museos.</p>
+                            
+                            <div class="precios">
+                                  
+                                <h5 style="color: black;"><b>Desde $450.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                    </div>
+            </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/tokio.jpeg);" class="ofertas_img">
+                        
+                        <h3>Tokio <br>Japón</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>Tradición y modernidad en la fascinante capital japonesa.</p>
+                            
+                            <div class="precios">
+                                <h5 style="color: black;"><b>Desde $520.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>  
+                    </div>
+            </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/Nuevayork.jpg);" class="ofertas_img">
+                        
+                        <h3>Nueva York <br> Estados Unidos</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>La Gran Manzana con sus rascacielos y vida cultural.</p>
+                            
+                            <div class="precios">  
+                                <h5 style="color: black;"><b>Desde $410.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                        </div>
+            </div>
+            <div class="tarjeta">
+                    <div style="background-image: url(public/imagenes/Bali.jpg);" class="ofertas_img">
+                        
+                        <h3>Bali <br>Indonesia</h3>
+                    </div>
+                    
+                    <div class="descrip_producto">
+                        <p>Paraiso tropical con playas, templos y cultura única.</p>
+                            
+                            <div class="precios">
+                                
+                                <h5 style="color: black;"><b>Desde $390.000</b></h5>
+                                <button id="agregar_carrito">Reservar</button>
+                            </div>
+                            
+                        </div>
+            </div>
+        </div>
+        </main>
+        <script defer src="public/js/index.js"></script>
+    
 </body>
 </html>

@@ -105,7 +105,7 @@ form .button-register{
     height: 115%;
     padding: 5rem 2rem 0 2rem;
     position: relative;    
-    background-image: url(/public/imagenes/flayer.png);
+    
     background-repeat: no-repeat;
     background-size: 100% 100%;   
 }
