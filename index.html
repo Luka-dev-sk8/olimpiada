@@ -73,10 +73,10 @@
     <p class="descripcion">Descubre nuestras mejores ofertas y paquetes especiales para que disfrutes de vacaciones inolvidable</p>
     
     <main class="caja">
-        <div class="tarjeta">
+        <div class="tarjeta" data-id="bariloche">
             <div style="background-image: url(public/imagenes/bariloche.jpeg);" class="ofertas_img">
                 <h4><b>OFERTA ESPECIAL</b></h4>
-                <h3>Bariloche</h3>
+                <h3 id="nombre_lugar">Bariloche</h3>
             </div>
             
             <div class="descrip_producto">
@@ -84,43 +84,43 @@
                 <p>Disfruta de la magia de la Patagonia Argentina con 
                     nuestros paquete con todo incluido</p>
                     
-                        <h5>Antes $180.000</h5>  
-                        <h5 style="color: black;"><b>Ahora $145.000</b></h5>
-                        <button id="agregar_carrito">Reservar</button>
+                        <h6>Antes $180.000</h6>  
+                        <h5 style="color: black;"><b>Ahora: $145.000</b></h5>
+                        <button class="agregar_carrito">Reservar</button>
                     </div>
                     
                 </div>
             </div>
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="cancun-playa">
                 <div style="background-image: url(public/imagenes/cancun.jpeg);" class="ofertas_img">
                     <h4><b>OFERTA ESPECIAL</b></h4>
-                    <h3>Cancún</h3>
+                    <h3 id="nombre_lugar">Cancún</h3>
                 </div>
                 
                 <div class="descrip_producto">
-                    <div class="producto">
+                    <div class="producto" >
                     <p>Playa paradisíacas, hospedaje con todo incluido y excursiones a los mejores cenotes y ruinas mayas.</p>
                         
-                            <h5>Antes $320.000</h5>  
+                            <h6>Antes $320.000</h6>  
                             <h5 style="color: black;"><b>Ahora: $275.000</b></h5>
-                            <button id="agregar_carrito">Reservar</button>
+                            <button class="agregar_carrito">Reservar</button>
                             
                         </div>
                     </div>
                 </div>
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="Barcelona-gaudi">
                 <div style="background-image: url(public/imagenes/Bacelona.jpeg);" class="ofertas_img">
                     <h4><b>OFERTA ESPECIAL</b></h4>
-                    <h3>Barcelona</h3>
+                    <h3 id="nombre_lugar">Barcelona</h3>
                 </div>
                 
                 <div class="descrip_producto">
-                    <div class="producto">
+                    <div class="producto" >
                     <p>Descubre la ciudad de Gaudí con este paquete que incluye hotel céntrico, tour guiado y entradas a atracciones.</p>
                         
-                            <h5>Antes $420.000</h5>  
+                            <h6>Antes $420.000</h6>  
                             <h5 style="color: black;"><b>Ahora: $380.000</b></h5>
-                            <button id="agregar_carrito">Reservar</button>
+                            <button class="agregar_carrito">Reservar</button>
                         </div>
                         
                     </div>
@@ -143,67 +143,67 @@
         <hr>
         <main class="caja">
 
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="Francia-paris">
                     <div style="background-image: url(public/imagenes/Paris2.jpeg);" class="ofertas_img">
                         
-                        <h3>Paris <br> Francia</h3>
+                        <h3 id="nombre_lugar">Paris <br> Francia</h3>
                     </div>
                     
                     <div class="descrip_producto">
-                        <div class="producto">
+                        <div class="producto" >
                         <p>La ciudad del amor con su iconica Torre Eiffel y museos.</p>
                             
                                   
                                 <h5 style="color: black;"><b>Desde: $450.000</b></h5>
-                                <button id="agregar_carrito">Reservar</button>
+                                <button class="agregar_carrito">Reservar</button>
                             </div>
                             
                     </div>
             </div>
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="japon-tokio">
                     <div style="background-image: url(public/imagenes/tokio.jpeg);" class="ofertas_img">
                         
-                        <h3>Tokio <br>Japón</h3>
+                        <h3 id="nombre_lugar">Tokio <br>Japón</h3>
                     </div>
                     
                     <div class="descrip_producto">
-                        <div class="producto">
+                        <div class="producto" >
                         <p>Tradición y modernidad en la fascinante capital japonesa.</p>
                             
                                 <h5 style="color: black;"><b>Desde: $520.000</b></h5>
-                                <button id="agregar_carrito">Reservar</button>
+                                <button class="agregar_carrito">Reservar</button>
                             </div>  
                     </div>
             </div>
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="estados unidos-nueva York">
                     <div style="background-image: url(public/imagenes/Nuevayork.jpg);" class="ofertas_img">
                         
-                        <h3>Nueva York <br> Estados Unidos</h3>
+                        <h3 id="nombre_lugar">Nueva York <br> Estados Unidos</h3>
                     </div>
                     
                     <div class="descrip_producto">
-                        <div class="producto">  
+                        <div class="producto" >  
                         <p>La Gran Manzana con sus rascacielos y vida cultural.</p>
                             
                                 <h5 style="color: black;"><b>Desde: $410.000</b></h5>
-                                <button id="agregar_carrito">Reservar</button>
+                                <button class="agregar_carrito">Reservar</button>
                             </div>
                             
                         </div>
             </div>
-            <div class="tarjeta">
+            <div class="tarjeta" data-id="Indonesia-bali">
                     <div style="background-image: url(public/imagenes/Bali.jpg);" class="ofertas_img">
                         
-                        <h3>Bali <br>Indonesia</h3>
+                        <h3 id="nombre_lugar">Bali <br>Indonesia</h3>
                     </div>
                     
                     <div class="descrip_producto">
-                        <div class="producto">
+                        <div class="producto" >
                         <p>Paraiso tropical con playas, templos y cultura única.</p>
                             
                                 
                                 <h5 style="color: black;"><b>Desde: $390.000</b></h5>
-                                <button id="agregar_carrito">Reservar</button>
+                                <button class="agregar_carrito">Reservar</button>
                             </div>
                             
                         </div>
