@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 
+
+
 function cargar_tabla_carrito(){
     let total = 0;
     carrito.forEach(item => {

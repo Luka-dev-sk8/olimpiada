@@ -26,9 +26,19 @@
                             <img src="public/imagenes/carrito-de-compras.png" alt="">
                         </button>
                         <div class="submenu">
-                            <h4>insertar imagen</h4>
-                            <h4>producto tal</h4>
-                            <p>precio $5555555</p>
+                            <table >
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>cantidad</th>
+                                        <th>Precio unitario</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="carrito-body_emergente">
+
+                                </tbody>
+                            </table>
                         </div>
                     </li>
                 
@@ -211,6 +221,7 @@
         </div>
         </main>
         <script defer src="public/js/index.js"></script>
+        <script src="public/js/datos_compra.js"> </script>
     
 </body>
 </html>

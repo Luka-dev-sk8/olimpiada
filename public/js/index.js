@@ -46,7 +46,7 @@ const boton_abrir = document.querySelector('.open_submenu');
         });
 
 
-document.addEventListener('DOMContentLoaded',() =>{
+document.addEventListener('DOMContentLoaded',() =>{    
     const botonesAgregar = document.querySelectorAll('.agregar_carrito');
     botonesAgregar.forEach(boton =>{
         boton.addEventListener('click',(e)=>{
@@ -69,4 +69,23 @@ document.addEventListener('DOMContentLoaded',() =>{
             console.log(localStorage)
         })
     })
+
+
+    let carrito = JSON.parse(localStorage.getItem('carrito') || []);
+    const tbdoy_E = document.getElementById('carrito-body_emergente')
+
+    function cargar_tabla_carrito_E(){
+    carrito.forEach(item =>{
+        const subtotal = item.cantidad * item.precio;
+         const row_E = document.createElement('tr');
+         row_E.innerHTML = `
+            <td>${item.nombre}</td>
+            <td>${item.cantidad}</td>
+            <td>$${item.precio.toLocaleString()}</td>
+            <td>$${subtotal.toLocaleString()}</td>`;
+            tbdoy_E.appendChild(row_E)
+    })
+}
+cargar_tabla_carrito_E();
+
 })
