@@ -271,7 +271,7 @@ img{ height: auto;
 }
 
 .caja{
-    gap: 25%;
+    gap: 10%;
     flex-wrap: wrap;
 }
 .tarjeta{
