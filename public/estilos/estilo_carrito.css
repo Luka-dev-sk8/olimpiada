@@ -125,3 +125,9 @@ button:hover{
 p{
     color: #185468;
 }
+
+#tabla-carrito {
+    display: block;
+    font-size: 0.1px; 
+}
+
