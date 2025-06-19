@@ -24,7 +24,7 @@ pasar.addEventListener('click', () =>{
 
 const pasa = document.getElementById('pasar_carrito')
 pasa.addEventListener('click', () =>{
-    window.location.href = '/public/carrito.html';
+    window.location.href = 'public/carrito.html';
 })
 
 
