@@ -187,13 +187,10 @@ hr{
     border: unset;
     border-radius: 7px;
     margin-left: 10px;
-    background-color: #85ff85;
+    background-color: unset;
     font-weight: 600;
 }
-.opciones:hover{
-    background-color: #54a354;
-    transition: 0.4s;
-}
+
 img{ height: auto;
     width: 30px;
 }
@@ -285,6 +282,7 @@ img{ height: auto;
     box-shadow: 0 0 5px 0 gray;
     width: 40ch;
     margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 20px;
     background-color: #141414;
     
@@ -343,7 +341,7 @@ h4{
     margin-bottom: 10px;
     gap: 10px;
 }
-#agregar_carrito{
+.agregar_carrito{
     border-radius: 10px;
     background-color: #8ec4d6;
     border: unset;
@@ -351,7 +349,7 @@ h4{
     padding: 7px;
     color: #141414;
 }
-#agregar_carrito:hover{
+.agregar_carrito:hover{
     background-color: #76a3b3;
     transition: 0.4s;
     animation: compra;
