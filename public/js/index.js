@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded',() =>{
             const text = productoDiv.querySelector('#nombre_lugar');
             const nombre = text ? text.textContent.trim() : 'Nombre no encontrado'; // conseguir el nombre del producto
             const text_P = productoDiv.querySelector('h5').textContent.trim(); //conseguir el precio y separalo por ":"
-            const [textoS,precio] = text_P.split(':');
+            const [textoS,precio] = text_P.split('$');
             const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
             let index = carrito.findIndex(item => item.id === id);
 

@@ -1,5 +1,38 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const btnEnviar = document.getElementById('Enviar');
+    let carrito = JSON.parse(localStorage.getItem('carrito') || []);
+    const tbdoy = document.getElementById('carrito-body')
+    const totalcell = document.getElementById('total');
+    const tablaCarrito = document.getElementById('tabla-carrito');
+    const imagen = document.getElementById('imagen')
+    
+    
+
+
+function cargar_tabla_carrito(){
+    let total = 0;
+    carrito.forEach(item => {
+        const subtotal = item.cantidad * item.precio;
+        total += subtotal;
+        const row = document.createElement('tr');
+        row.innerHTML =`
+            <td>${item.nombre}</td>
+            <td>${item.cantidad}</td>
+            <td>$${item.precio.toLocaleString()}</td>
+            <td>$${subtotal.toLocaleString()}</td>`;
+            tbdoy.appendChild(row)
+    });
+totalcell.textContent = `$${total.toLocaleString()}`;
+}
+if (carrito.length === 0) {
+        tablaCarrito.style.display = 'none';
+        imagen.style.display = 'block';
+    } else {
+        tablaCarrito.style.fontSize = '17px';
+        imagen.style.display = 'none';
+        cargar_tabla_carrito(); 
+    }
 
     btnEnviar.addEventListener('click', async () => {
         console.log('Evento click disparado');
